@@ -1,16 +1,14 @@
-package com.bruce.shardingjdbcdemo.entity;
+package com.bruce.shardingjdbcdemo.dto;
 
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * 课程实体类
- */
 @Data
 @Builder
-public class Course {
+public class CourseDTO implements Serializable {
 
     /**
      * 课程Id
