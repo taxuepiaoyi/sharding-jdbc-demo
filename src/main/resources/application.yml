@@ -9,9 +9,6 @@ spring:
   application:
     name: sharding-jdbc-demo
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: seata-server-group
     nacos:
       discovery:
         # Nacos的服务注册地址，可以配置多个，逗号分隔
