@@ -7,8 +7,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.bruce"})
 @ComponentScan(basePackages = {"com.bruce"})
+@MapperScan(basePackages = {"com.bruce"})
 @EnableDiscoveryClient
 public class ShardingJdbcDemoApplication {
 
