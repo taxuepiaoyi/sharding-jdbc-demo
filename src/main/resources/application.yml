@@ -44,6 +44,17 @@ spring:
           enabled: true
         watch-delay: 30000
 
+
+#mybatisplus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    auto-mapping-unknown-column-behavior: warning
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/**/*Mapper.xml
+
+
 logging:
   level:
     com.broadview.coupon: debug

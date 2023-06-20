@@ -24,9 +24,9 @@ public class CourseServiceImpl implements CourseService {
         BeanUtils.copyProperties(courseDTO,course);
         CourseDTO historyCourse = findCourseById(course.getCid()) ;
         if(historyCourse != null){
-            courseMapper.updateById(course) ;
+            courseMapper.updateCourse(course); ;
         }else{
-            courseMapper.insert(course) ;
+            courseMapper.addCourse(course);
         }
         return Boolean.TRUE;
     }

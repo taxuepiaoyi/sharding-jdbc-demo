@@ -6,7 +6,29 @@
         <id column="cid" property="cid" jdbcType="BIGINT"/>
         <result column="cname" property="cname" jdbcType="VARCHAR"/>
         <result column="user_id" property="userId" jdbcType="BIGINT"/>
-        <result column="created_time" property="createdTime" jdbcType="datetime"/>
+        <result column="created_time" property="createdTime" jdbcType="TIMESTAMP"/>
         <result column="cstatus" property="cstatus" jdbcType="VARCHAR"/>
     </resultMap>
+
+    <insert id="addCourse" >
+        insert into course(cname,user_id,created_time,cstatus)
+        values(#{cname},#{userId},#{createdTime},#{cstatus}) ;
+    </insert>
+
+    <update id="updateCourse" >
+        update course set 1=1
+        <if test="#{cname} != null" >
+           and  cname = #{cname}
+        </if>
+        <if test="#{userId} != null" >
+            and  user_id = #{userId}
+        </if>
+        <if test="#{createdTime} != null" >
+            and  created_time = #{createdTime}
+        </if>
+        <if test="#{cstatus} != null" >
+            and  cstatus = #{cstatus}
+        </if>
+       where cid = #{cid}
+    </update>
 </mapper>
