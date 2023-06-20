@@ -33,6 +33,9 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public CourseDTO findCourseById(Long cid) {
+        if(cid == null){
+            return null ;
+        }
         Course course = courseMapper.selectById(cid);
         if(course != null){
             CourseDTO courseDTO = CourseDTO.builder().build();

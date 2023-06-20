@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.bruce"})
-@MapperScan(basePackages = {"com.bruce"})
+@MapperScan(basePackages = {"com.bruce.shardingjdbcdemo.mapper"})
 @EnableDiscoveryClient
 public class ShardingJdbcDemoApplication {
 
