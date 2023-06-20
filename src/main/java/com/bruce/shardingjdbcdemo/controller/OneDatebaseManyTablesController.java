@@ -37,9 +37,7 @@ public class OneDatebaseManyTablesController {
         log.info("dataSourseStr = [{}]",dataSourseStr);
         Course course = Course.builder().build();
         BeanUtils.copyProperties(courseDTO,course);
-        courseMapper.insert(course) ;
-        return Boolean.TRUE ;
-        // return courseService.saveCourse(courseDTO) ;
+        return courseService.saveCourse(courseDTO) ;
     }
 
 }
