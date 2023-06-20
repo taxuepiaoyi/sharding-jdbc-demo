@@ -31,7 +31,7 @@ public class OneDatebaseManyTablesController {
     @Autowired
     private UserService userService ;
 
-    @Value("${spring.shardingsphere.datasource.demo.url}")
+    @Value("${spring.shardingsphere.datasource.mydb.type}")
     private String dataSourseStr ;
 
     @PostMapping("saveCourse")
