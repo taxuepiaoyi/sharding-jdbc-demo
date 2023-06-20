@@ -53,6 +53,7 @@ mybatis-plus:
     auto-mapping-unknown-column-behavior: warning
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/mapper/**/*Mapper.xml
+  typeAliasesPackage: com.bruce.shardingjdbcdemo.entity
 
 
 logging:
